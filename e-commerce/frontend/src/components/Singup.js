@@ -14,7 +14,7 @@ function Singup() {
         }
     })
     const collectData = async () => {
-        console.log(name, email, password);
+        // console.log(name, email, password);
         let result = await fetch('http://localhost:4000/singup', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
@@ -23,7 +23,7 @@ function Singup() {
             },
         });
         result = await result.json();
-        console.log(result);
+        // console.log(result);
         localStorage.setItem('user', JSON.stringify(result.result));
         localStorage.setItem('token', JSON.stringify(result.auth));
         navigate('/');

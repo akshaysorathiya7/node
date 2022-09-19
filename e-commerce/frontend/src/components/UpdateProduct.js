@@ -11,10 +11,10 @@ function UpdateProduct() {
 
     useEffect(() => {
         getProductDetails();
-    }, [])
+    },)
 
     const getProductDetails = async () => {
-        console.warn(params)
+        // console.warn(params)
         let result = await fetch(`http://localhost:4000/products/${params.id}`, {
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -28,7 +28,7 @@ function UpdateProduct() {
     }
 
     const updateProduct = async () => {
-        console.warn(name, price, category, company)
+        // console.warn(name, price, category, company)
         let result = await fetch(`http://localhost:4000/products/${params.id}`, {
             method: 'Put',
             body: JSON.stringify({ name, price, category, company }),

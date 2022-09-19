@@ -10,7 +10,7 @@ function Login() {
         if (auth) {
             navigate("/")
         }
-    }, [])
+    },)
 
     const handleLogin = async () => {
         let result = await fetch("http://localhost:4000/login", {
@@ -27,7 +27,7 @@ function Login() {
             localStorage.setItem('token', JSON.stringify(result.auth));
             navigate("/")
         } else {
-            alert("Please enter correct details")
+            alert("Please enter correct details");
         }
     }
     return (

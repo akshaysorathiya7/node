@@ -48,7 +48,6 @@ function AddProduct() {
 
             <button onClick={addProduct} className='appButton'>Add Product</button>
         </div>
-
     )
 }
 

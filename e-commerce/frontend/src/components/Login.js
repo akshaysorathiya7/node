@@ -5,6 +5,7 @@ function Login() {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const navigate = useNavigate();
+    
     useEffect(() => {
         const auth = localStorage.getItem('user');
         if (auth) {
